@@ -3,6 +3,7 @@ version: '3.7'
 services:
   app:
     container_name: nodejs-api
+    entrypoint: dockerize -wait tcp//db:3306 -timeout 10s docker-entrypoint.sh
     build:
       context: ./node
     command: node server.js
