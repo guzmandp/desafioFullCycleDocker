@@ -21,7 +21,7 @@ connection.end();
 
 app.get('/', (req, res) => {
 
-  const names = 'Darwin Jesus Guzman Betancourt'
+  const name = 'Darwin Jesus Guzman Betancourt'
 
   connection.query(`INSERT INTO people (name) VALUES ('${name}')`)
 

@@ -3,8 +3,9 @@ version: '3.7'
 services:
   app:
     container_name: nodejs-api
-    entrypoint: dockerize -wait tcp//db:3306 -timeout 10s docker-entrypoint.sh
+    entrypoint: dockerize -wait tcp://db:3306 -timeout 10s docker-entrypoint.sh
     build:
+      dockerfile: ./Dockerfile
       context: ./node
     command: node server.js
     #ports: 
@@ -26,6 +27,7 @@ services:
     tty: true
     volumes:
       - ./mysql/data:/var/lib/mysql
+      - ./mysql/create.sql:/docker-entrypoint-initdb.d/init.sql
     environment:
       - MYSQL_DATABASE=nodedb
       - MYSQL_ROOT_PASSWORD=root
