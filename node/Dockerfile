@@ -1,6 +1,8 @@
-FROM alpine:3.19
+FROM node:18-alpine
 
-ENV NODE_VERSION 22.6.0
+#FROM alpine:3.19
+
+#ENV NODE_VERSION 22.6.0
 
 #FROM node:22.6.0
 
@@ -23,6 +25,6 @@ RUN apk update --no-cache \
 
 EXPOSE 3000
 
-ENTRYPOINT ["npm", "install"]
+#ENTRYPOINT ["npm", "install"]
 
 CMD [ "node", "server.js" ]

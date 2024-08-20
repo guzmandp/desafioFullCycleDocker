@@ -7,7 +7,7 @@ services:
     build:
       dockerfile: ./Dockerfile
       context: ./node
-    command: node server.js
+    command: "npm install && node server.js"
     #ports: 
     #  - "8080:8080"
     tty: true
@@ -15,9 +15,9 @@ services:
       - db
     volumes:
       - ./node:/app
-      #- ./node:/usr/src/app
     networks:
       - networknodemysql
+    
 
   db:
     image: mysql:5.7
