@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = process.env.APP_PORT || 3000
+const port = process.env.APP_PORT || 5000
 const config = {
   host: 'db',
   user: 'root',
