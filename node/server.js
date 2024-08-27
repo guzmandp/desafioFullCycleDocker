@@ -21,20 +21,20 @@ connection.end();
 
 app.get('/', (req, res) => {
 
-  const name = 'Darwin Jesus Guzman Betancourt'
+  //const name = 'Darwin Jesus Guzman Betancourt'
 
-  connection.query(`INSERT INTO people (name) VALUES ('${name}')`)
+  //connection.query(`INSERT INTO people (name) VALUES ('${name}')`)
 
-  connection.query(`SELECT name FROM people`, (error, results) => {
+ /*  connection.query(`SELECT name FROM people`, (error, results) => {
     res.send(`
       <h1>Full Cycle Rocks!</h1>
       <ul>
         ${!!results.length ? results.map(el => `<li>${el.name}</li>`).join('') : ''}
       </ul>
     `)
-  })
-    //res.send('<h1>Full Cycle Rocks!</h1>');
-    //console.log(`Hello World`);
+  }) */
+    res.send('<h1>Full Cycle Rocks!</h1>');
+    console.log(`Hello World`);
 
 })
 
