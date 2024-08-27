@@ -23,7 +23,7 @@ RUN apk update --no-cache \
 
 #RUN npm install
 
-EXPOSE 3000
+EXPOSE 5000
 
 #ENTRYPOINT ["npm", "install"]
 
