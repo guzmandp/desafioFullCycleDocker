@@ -3,7 +3,7 @@ CREATE TABLE people (
 )
 
 
-INSERT INTO people(name) VALUES 
-(1, 'John'),
-(2, 'Jane'),
-(3, 'Darwin');
+/* INSERT INTO people(name) VALUES 
+('John Connor'),
+('Mary Jane'),
+('Darwin Betancourt'); */
